@@ -1,0 +1,42 @@
+<div class="my-container d-grid header-container">
+    @if (Stats != null) {
+        <div class="stat">
+            <div class="icon">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+            <p class="number">
+                {{Stats.totalGarbges | number}}
+            </p>
+            <span class="lable">
+                عدد النفايات
+            </span>
+        </div>
+        <div class="stat">
+            <div class="icon">
+                <i class="fa-solid fa-spinner"></i>
+            </div>
+            <p class="number">
+                {{Stats.totalProcessdGarbges | number}}
+            </p>
+            <span class="lable">
+                تمت معالجتها
+            </span>
+        </div>
+        <div class="stat">
+            <div class="icon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <p class="number">
+                {{Stats.totalUnProcessdGarbges | number}}
+            </p>
+            <span class="lable">
+                لم تعالج
+            </span>
+        </div>
+    }
+
+</div>
+
+<div class="my-container">
+    <app-dashboard-records></app-dashboard-records>
+</div>

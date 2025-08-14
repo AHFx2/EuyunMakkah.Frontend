@@ -1,0 +1,52 @@
+.my-container {
+    margin: 1.5rem 3rem;
+
+}
+
+.header-container {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 2rem;
+}
+
+.stat {
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 10px; 
+    margin: 0 0px;
+}
+
+.stat:first-of-type .icon {
+    background-color: #ebd788c8;
+    color: #eec729;
+}
+
+.stat:nth-of-type(2) .icon {
+    background-color: #a9eeaccc;
+    color: var(--primary-Color);
+}
+
+.stat:last-of-type .icon {
+    background-color: #c4424ba3;
+    color: #a00f18;
+}
+
+.icon {
+    width: fit-content;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.number {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: rgba(24, 23, 23, 0.778);
+}
+
+.lable {
+    font-size: 1rem;
+    color: rgba(128, 128, 128, 0.542);
+}
+
