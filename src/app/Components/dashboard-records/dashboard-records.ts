@@ -40,7 +40,7 @@ export class DashboardRecords implements OnInit, OnDestroy {
       complete: () => {},
     });
 
-    this._signalRService.startConnection();
+    
     this._signalRService.newRecord$.subscribe(data => {
       if (data != null)
       {

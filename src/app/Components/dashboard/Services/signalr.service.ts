@@ -36,17 +36,6 @@ export class SignalrService {
     );
   };
 
-  //   public addRecordListener(): RecivedGarbageRecord {
-  //     var data!: RecivedGarbageRecord;
-  //     this.hubConnection.on(
-  //       'RecivedGarbageRecord',
-  //       (recived: RecivedGarbageRecord) => {
-  //         data = recived;
-  //       }
-  //     );
-  //     return data;
-  //   }
-
   stopConnection() {
     if (this.hubConnection) {
       this.hubConnection.stop();
