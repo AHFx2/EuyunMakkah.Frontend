@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { GarbageRecord } from '../dashboard/Models/garbage-record';
 import { DashboardService } from '../dashboard/Services/dashboard-service';
 import Swal from 'sweetalert2';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { GarbageDetails } from '../garbage-details/garbage-details';
+import { SignalrService } from '../dashboard/Services/signalr.service';
 
 @Component({
   selector: 'app-dashboard-records',
@@ -11,18 +12,22 @@ import { GarbageDetails } from '../garbage-details/garbage-details';
   templateUrl: './dashboard-records.html',
   styleUrl: './dashboard-records.css',
 })
-export class DashboardRecords implements OnInit {
+export class DashboardRecords implements OnInit, OnDestroy {
   Records: GarbageRecord[] = [];
 
   constructor(
     private _dashboardService: DashboardService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private _signalRService:SignalrService
   ) {}
+
+  ngOnDestroy(): void {
+    this._signalRService.stopConnection();
+  }
 
   ngOnInit(): void {
     this._dashboardService.GetGarbageRecords().subscribe({
       next: (response) => {
-        console.log(response);
         this.Records = response.data;
       },
       error: () => {
@@ -34,6 +39,14 @@ export class DashboardRecords implements OnInit {
       },
       complete: () => {},
     });
+
+    this._signalRService.startConnection();
+    this._signalRService.newRecord$.subscribe(data => {
+      if (data != null)
+      {
+        this.Records.unshift(data);
+      }
+    })
   }
   openDetails() {
     this.modalService.open(GarbageDetails, { centered: true, size: 'lg' });
