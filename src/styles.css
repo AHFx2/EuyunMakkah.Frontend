@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
     --primary-Color: #4fd956;
     --secondary-Color: #31a83a;
@@ -11,5 +13,13 @@
 
 body {
     background-color:rgba(218, 218, 218, 0.359);
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
+}
+
+.bg-col {
+    background-color: red;
+}
+
+.bg-col1 {
+    background-color: green;
 }
