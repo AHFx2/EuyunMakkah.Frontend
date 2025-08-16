@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+.my-container {
+    margin: 1.5rem 3rem;
+}
+
 body {
     background-color:rgba(209, 211, 238, 0.192);
 }

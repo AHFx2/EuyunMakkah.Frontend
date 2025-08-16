@@ -1,0 +1,28 @@
+.my-container {
+    background-color: white;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+
+tbody tr {
+    border-bottom: 1px solid white;
+}
+
+tbody tr:hover {
+    transition: 0.3s;
+    background-color: rgb(0, 255, 4);
+    color: white;
+}
+
+.bg-row {
+    background-color: rgba(0, 255, 4, 0.13);
+}
+
+th {
+    padding: 0.5rem;
+
+}
