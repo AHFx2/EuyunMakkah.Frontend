@@ -26,8 +26,8 @@ h1 {
 }
 
 .stat:nth-of-type(2) .icon {
-    background-color: #a9eeaccc;
-    color: var(--primary-Color);
+    background-color: rgba(7, 255, 69, 0.488);
+    color: rgb(0, 255, 64);
 }
 
 .stat:last-of-type .icon {
