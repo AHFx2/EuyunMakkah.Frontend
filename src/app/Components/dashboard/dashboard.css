@@ -2,10 +2,15 @@
     margin: 1.5rem 3rem;
 }
 
+h1 {
+    font-weight: bold;
+}
+
 .header-container {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2rem;
 }
+
 
 .stat {
     background-color: rgb(255, 255, 255);
