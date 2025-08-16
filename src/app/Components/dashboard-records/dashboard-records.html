@@ -12,7 +12,7 @@
             @for (record of Records; track record.id; let i = $index) {
             <tr [class.bg-row]="i % 2 == 0">
                 <th scope="row">{{i+1}}</th>
-                <td>{{record.status == "Unprocessed" ? "غير معالجة" : "معالجة"}}</td>
+                <td> <span [appStatusColor]="record.status">{{record.status == "Unprocessed" ? "غير معالجة" : "معالجة"}}</span> </td>
                 <td>{{record.detectedTime}}</td>
                 <td><a (click)="openDetails()"><i class="fa-solid fa-circle-info"></i></a></td>
             </tr>

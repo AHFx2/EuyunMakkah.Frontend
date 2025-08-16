@@ -5,10 +5,11 @@ import Swal from 'sweetalert2';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { GarbageDetails } from '../garbage-details/garbage-details';
 import { SignalrService } from '../dashboard/Services/signalr.service';
+import { StatusColor } from '../dashboard/Directives/status-color';
 
 @Component({
   selector: 'app-dashboard-records',
-  imports: [],
+  imports: [StatusColor],
   templateUrl: './dashboard-records.html',
   styleUrl: './dashboard-records.css',
 })
