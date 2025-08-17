@@ -20,16 +20,16 @@ export class StatusColor implements OnChanges {
 
     switch (this.status?.toLowerCase()) {
       case 'processed':
-        background = '#FFA500'; // Orange
+        background = '#ffa60070'; // Orange
         break;
       case 'done':
-        background = '#4CAF50'; // Green
+        background = '#4caf4f70'; // Green
         break;
       case 'unprocessed':
-        background = '#F44336'; // Red
+        background = '#f4433670'; // Red
         break;
       default:
-        background = '#9E9E9E'; // Grey
+        background = '#9e9e9e70'; // Grey
     }
 
     this.renderer.setStyle(this.el.nativeElement, 'background-color', background);
