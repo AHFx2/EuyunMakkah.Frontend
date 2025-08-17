@@ -6,10 +6,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { GarbageDetails } from '../garbage-details/garbage-details';
 import { SignalrService } from '../dashboard/Services/signalr.service';
 import { StatusColor } from '../dashboard/Directives/status-color';
+import { MatTableModule } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-dashboard-records',
-  imports: [StatusColor],
+  imports: [StatusColor, MatTableModule],
   templateUrl: './dashboard-records.html',
   styleUrl: './dashboard-records.css',
 })
@@ -49,7 +51,8 @@ export class DashboardRecords implements OnInit, OnDestroy {
       }
     })
   }
-  openDetails() {
-    this.modalService.open(GarbageDetails, { centered: true, size: 'lg' });
+  openDetails(id:number) {
+    const modalRef = this.modalService.open(GarbageDetails, { centered: true, size: 'lg' });
+    modalRef.componentInstance.garbageId = id;
   }
 }

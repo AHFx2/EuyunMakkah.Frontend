@@ -1,4 +1,7 @@
 <div class="my-container">
+    <header>
+        test
+    </header>
     <table>
         <thead>
             <tr>
@@ -14,7 +17,7 @@
                 <th scope="row">{{i+1}}</th>
                 <td> <span [appStatusColor]="record.status">{{record.status == "Unprocessed" ? "غير معالجة" : "معالجة"}}</span> </td>
                 <td>{{record.detectedTime}}</td>
-                <td><a (click)="openDetails()"><i class="fa-solid fa-circle-info"></i></a></td>
+                <td><a (click)="openDetails(record.id)"><i class="fa-solid fa-circle-info"></i></a></td>
             </tr>
             }
         </tbody>

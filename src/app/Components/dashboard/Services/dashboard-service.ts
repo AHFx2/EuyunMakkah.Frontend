@@ -4,6 +4,8 @@ import { inject, Injectable } from '@angular/core';
 import { ClsResponse } from '../../../Shared/Models/cls-response';
 import { Stats } from '../Models/stats';
 import { GarbageRecord } from '../Models/garbage-record';
+import { GarbageDetails } from '../../garbage-details/garbage-details';
+import { GarbageDetailsClass } from '../Models/garbage-details-class';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +21,9 @@ export class DashboardService {
 
   GetGarbageRecords() {
     return this.http.get<ClsResponse<GarbageRecord[]>>(`${this.baseURL}/DetectedImages/records`);
+  }
+
+  GetGarbageDetails(id:number) {
+    return this.http.get<ClsResponse<GarbageDetailsClass>>(`${this.baseURL}/DetectedImages/records/details/${id}`);
   }
 }

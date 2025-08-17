@@ -15,6 +15,7 @@ h1 {
     font-size: 1.4rem;
     border-radius: 10px; 
     margin: 0 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .stat:first-of-type .icon {

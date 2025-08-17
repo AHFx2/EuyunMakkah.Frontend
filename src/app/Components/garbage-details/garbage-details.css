@@ -1,23 +1,10 @@
-.detail-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+.img-container {
+    width: 400px;
+    height: 400px;
 }
 
-.detail {
-    background-color: rgba(174, 181, 165, 0.575);
-    width: fit-content;
-    padding: 1rem 1.5rem;
-}
-
-.content {
-    width : 300px;
-    height: auto;;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.content > img {
+.img-container > img{
     width: 100%;
+    height: 100%;
 }

@@ -1,19 +1,22 @@
-<h3>التفاصيل</h3>
-<div class="detail-container">
-    <div class="detail">
-        <div>
-            <p class="sub-title">الصورة</p>
-            <div class="content">
-                <img src="/LinkedIn20252.png" alt="alt">
+@if (garbageDetails != null) {
+    <h3>التفاصيل</h3>
+    <div id="carouselExample" class="img-container carousel slide">
+        <p>الحالة <span [appStatusColor]="garbageDetails.status">{{garbageDetails.status}}</span></p>
+        <div class="carousel-inner">
+            <div class="img-container carousel-item active">
+                <img src="/makkhaMap.png" class="d-block w-100" alt="...">
             </div>
+        <div class="carousel-item">
+            <img [src]="getImage(garbageDetails.image)" class="d-block w-100" alt="...">
         </div>
     </div>
-    <div class="detail">
-        <div>
-            <p class="sub-title">موقع الصورة</p>
-            <div class="content">
-                <img src="/LinkedIn20252.png" alt="alt">
-            </div>
-        </div>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+    }

@@ -5,7 +5,7 @@ import { MapComponent } from './Components/map-component/map-component';
 
 export const routes: Routes = [
   { path: 'dashboard', component: Dashboard },
-  { path: 'garbage-details', component: GarbageDetails },
+  { path: 'garbage-details/:id', component: GarbageDetails },
   { path: 'map', component: MapComponent },
   { path: '**', component: Dashboard },
 ];

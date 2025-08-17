@@ -1,15 +1,19 @@
 .my-container {
     background-color: white;
     border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header {
+    margin: 5rem 2.5rem;
 }
 
 table {
     width: 100%;
 }
 
-
-tbody tr {
-    border-bottom: 1px solid white;
+thead tr {
+    box-shadow: rgb(38, 77, 45) 0px 8px 30px -10px;
 }
 
 tbody tr:hover {
@@ -23,6 +27,6 @@ tbody tr:hover {
 }
 
 th {
-    padding: 0.5rem;
+    padding: 1rem;
 
 }
